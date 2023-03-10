@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+ wordpress:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    environment:
+      WORDPRESS_DB_HOST: db.cee1imeoy5r1.eu-central-1.rds.amazonaws.com
+      WORDPRESS_DB_USER: Gklward
+      WORDPRESS_DB_PASSWORD: 123456789av
+      WORDPRESS_DB_NAME: db
+    volumes:
+      - ./wordpress:/var/www/html  
+
+volumes:
+  wordpress:
+
+  
